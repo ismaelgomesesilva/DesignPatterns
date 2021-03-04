@@ -1,0 +1,16 @@
+{
+    "name": "desingpattern/teste",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Ismael Silva",
+            "email": "ismaelgomesesilva@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "DesignPattern\\": "src/"
+        }
+    }
+}
