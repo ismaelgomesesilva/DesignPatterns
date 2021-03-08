@@ -1,5 +1,6 @@
 <?php
 
+use DesignPattern\Behavioral\Mediator\Buyer;
 use  DesignPattern\Behavioral\Mediator\Seller;
 use  DesignPattern\Behavioral\Mediator\Mediator;
 use  DesignPattern\Behavioral\Mediator\SellerProduct;
@@ -14,4 +15,16 @@ $seller1->addProduct(new SellerProduct($id = 2, $name = "calça", $price = 20));
 $seller2 = new Seller();
 $seller2->addProduct(new SellerProduct($id = 3, $name = "carro", $price = 30009.9));
 $seller2->addProduct(new SellerProduct($id = 4, $name = "caminhao", $price = 500000));
+
+$mediator->addSeller($seller1, $seller2);
+
+//$mediator->showProducts();
+
+$buyer = new Buyer($mediator);
+
+$buyer->viewProducts();
+$buyer->buy(2);
+$buyer->buy(3);
+$buyer->viewProducts();
+
 echo "fim";

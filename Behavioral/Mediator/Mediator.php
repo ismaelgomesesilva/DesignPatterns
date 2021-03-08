@@ -16,10 +16,10 @@ class Mediator
     public function buy(string $id)
     {
         foreach ($this->sellers as $index => $seller) {
-            $product = $seller->sell($id);
+            $product = $seller->sell($index);
 
             if ($product) {
-                echo "Seu produto é \n ID " . $product->id . "\n name - " . $product->name . " \n price- " . $product->price . "\n";
+                echo "Seu produto é " . print_r($product);
                 return;
             }
         }
@@ -29,7 +29,7 @@ class Mediator
     public function showProducts(): void
     {
         foreach ($this->sellers as $seller) {
-            $seller->showAll();
+            $seller->showProduct();
         }
     }
 }

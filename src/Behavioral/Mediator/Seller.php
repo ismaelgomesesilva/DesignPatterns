@@ -12,7 +12,7 @@ class Seller
     public function showAll(): void
     {
         foreach ($this->products as $product) {
-            echo $product->id . " " .  $product->name . " " .  $product->price;
+            echo $product->id . " " .  $product->name . " " .  $product->price . "\n";
         }
     }
 
@@ -31,7 +31,7 @@ class Seller
     public function sell(String $id)
     {
         foreach ($this->products as $index => $product) {
-            if ($product->ID == $id) {
+            if ($product->id == $id) {
                 $productIndex = $index;
             }
         }
