@@ -3,7 +3,7 @@
 use DesignPattern\Behavioral\Memento\ImageEditor;
 use DesignPattern\Behavioral\Memento\ImageEditorBackupManager;
 
-require "vendor/autoload.php";
+require "../../vendor/autoload.php";
 
 $imageEditor = new ImageEditor("teste", "gif");
 $imageEditorBackupManager = new ImageEditorBackupManager($imageEditor);
